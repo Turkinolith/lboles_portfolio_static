@@ -1,0 +1,81 @@
+.footer {
+  background-color: $color-grey-dark-3;
+  padding: 10rem 0;
+  font-size: 1.4rem; //slightly smaller text since its a footer and not hugely important.
+  color: $color-grey-light-1;
+
+  @include respond(tab-port) {
+    padding: 8rem 0 2rem 0;
+  }
+
+  // Styles for the company logo container
+  &__logo-box {
+    text-align: center; // centers the image since its an in-line element.
+    margin-bottom: 8rem; // 80px spacing below it.
+
+    @include respond(tab-port) {
+      margin-bottom: 6rem; // lower spacing on smaller screens.
+    }
+  }
+
+  // Styles for the company logo itself
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
+
+  &__navigation {
+    border-top: 1px solid $color-grey-dark;
+    padding-top: 2rem;
+    display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-grey-light-1;
+      background-color: $color-grey-dark-3;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+      box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: 0.4);
+      transform: rotate(5deg) scale(1.3);
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid $color-grey-dark;
+    padding-top: 2rem;
+    width: 85%;
+    float: right;
+
+    @include respond(tab-port) {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

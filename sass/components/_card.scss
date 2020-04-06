@@ -1,0 +1,290 @@
+.card {
+  // * This is for functionality for the card base element
+  perspective: 100rem;
+  -moz-perspective: 100rem;
+  position: relative;
+  height: 52rem; // This is set to make the front side the same size as the back side. And to make them have the same height as the container.
+
+  &__side {
+    height: 52rem;
+    transition: all 0.6s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
+    overflow: hidden;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    /////////////////////////////////////////////
+    // * Stylings for the back side of the cards
+    /////////////////////////////////////////////
+    // * Initial 180 turn for the <back> card.
+    &--back {
+      transform: rotateY(180deg);
+
+      &-A {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      &-B {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+
+      &-C {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+
+  // Transform on hover animations for the front and back cards
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // * Centers the "BUY NOW" button on the back of the card
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  // * this part doesn't need to catch your eye, so deliberately small
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  // * Price should be really big, but use thin text because fonts look better when large at thin values vs bolder.
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 300;
+  }
+
+  /////////////////////////////////////////////
+  // * Stylings for the Front side of the cards
+  /////////////////////////////////////////////
+
+  // * First Card Front Stylings
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+
+    &--A {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/nat-5-small.jpg);
+      -webkit-clip-path: $card-clip-path;
+      clip-path: $card-clip-path;
+
+      //* If viewer is using high resolution device & display is larger than phone size, use high rez image.
+      //* OR If display is 1000px or greater, use the larger rez image regardless.
+      //! Remember Media Queries are always in em: 600/16 = 37.5, 1000/16 = 62.5
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+        only screen and (min-width: 62.5em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary-light, 0.801),
+            rgba($color-secondary-dark, 0.801)
+          ),
+          url(../../img/nat-5.jpg);
+      }
+    }
+
+    // * Second Card Front Stylings
+    &--B {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../img/nat-6-small.jpg);
+      -webkit-clip-path: $card-clip-path;
+      clip-path: $card-clip-path;
+
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+        only screen and (min-width: 62.5em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.801),
+            rgba($color-primary-dark, 0.801)
+          ),
+          url(../../img/nat-6.jpg);
+      }
+    }
+
+    // * Third Card Front Stylings
+    &--C {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../img/nat-7-small.jpg);
+      -webkit-clip-path: $card-clip-path;
+      clip-path: $card-clip-path;
+
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+        only screen and (min-width: 62.5em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-tertiary-light, 0.801),
+            rgba($color-tertiary-dark, 0.801)
+          ),
+          url(../../img/nat-7.jpg);
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--A {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+
+    &--B {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+
+    &--C {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 2px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  //* Display the card with the back visible if screen is smaller than 56em or where using a device where touch is primary input.
+  //@include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    height: auto;
+    border-radius: 10px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      /////////////////////////////////////////////
+      // * Stylings for the back side of the cards
+      /////////////////////////////////////////////
+      // * Initial 180 turn for the <back> card.
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+
+    // Transform on hover animations for the front and back cards
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 0 1rem;
+    }
+
+    // * Centers the "BUY NOW" button on the back of the card
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    // * Price should be really big, but use thin text because fonts look better when large at thin values vs bolder.
+    &__price-value {
+      font-size: 6rem;
+    }
+  }
+}

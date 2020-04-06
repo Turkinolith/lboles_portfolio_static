@@ -1,0 +1,94 @@
+.story {
+  width: 75%;
+  margin: 0 auto; //* because this is a block element inside of a block element
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: rgba($color-white, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  //* Skews the background to make the rhombus shape
+  transform: skewX(-12deg);
+  transition: all 0.25s;
+
+  @include respond(tab-port) {
+    padding: 4rem;
+    padding-left: 7rem;
+    width: 100%;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
+  //* This fixes the text, but not the image, why? Because the shape already has a transform on it.
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  // * Figure element in the story block.
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    //* If browser supports clip path display as desired, otherwise use default older-browser settings.
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
+  }
+
+  //* Sets the image height to fill the parent circle, and adjusts to have the lady centered in it.
+  //! IMAGE Settings
+  &__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all 0.5s;
+  }
+
+  //* Fixes the rhombus shape skew being applied to the text
+  &__text {
+    transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
+  }
+
+  //* centers the figure caption on top of the image
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  //! Image Hover
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(70%);
+  }
+}

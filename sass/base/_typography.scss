@@ -6,15 +6,21 @@ body {
 }
 
 .heading-primary {
-  color: $color-white;
+  color: $color-primary;
   text-transform: uppercase;
   margin-bottom: 6rem;
+
 
   &--main {
     display: block;
     font-size: 6rem;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 3.5rem;
+    
+    @supports (-webkit-text-stroke: 1px black) {
+      -webkit-text-stroke: 1px black;
+      -webkit-text-fill-color: $color-primary;
+    }
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -29,8 +35,13 @@ body {
   &--sub {
     display: block;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: 1.74rem;
+
+    @supports (-webkit-text-stroke: 1px black) {
+      -webkit-text-stroke: 1px black;
+      -webkit-text-fill-color: $color-primary-dark;
+    }
 
     animation: moveInRight 1s ease-out;
 
@@ -41,9 +52,9 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
+
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   display: inline-block;
   background-image: linear-gradient(
     to right,
@@ -55,6 +66,15 @@ body {
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
+
+  &--main {
+    display: block;
+    font-size: 2.5rem;
+  }
+  &--sub {
+    display: block;
+    font-size: 2rem;
+  }
 
   @include respond(tab-port) {
     font-size: 2.75rem;

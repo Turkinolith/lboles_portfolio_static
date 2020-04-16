@@ -60,57 +60,68 @@
     </div>
 
     <header class="header">
-      <div class="header__logo-box">
-        <img src="img/logo-white.png" alt="logo" class="header__logo" />
-      </div>
       <div class="header__artbox">
+        <img
+          src="img/cloud01.png"
+          alt="Cloud"
+          className="header__artbox--Background__cloud--cloud1"
+        />
+        <img
+          src="img/cloud01.png"
+          alt="Cloud"
+          className="header__artbox--Background__cloud--cloud2"
+        />
         <div
-          class="header__artbox--parallax"
+          class="header__artbox--parallax parallax--object"
           id="para_00"
           data-rellax-speed="-15"
           data-rellax-zindex="-10"
         ></div>
         <div
-          class="header__artbox--parallax"
+          class="header__artbox--parallax parallax--object"
           id="para_01"
           data-rellax-speed="-15"
           data-rellax-zindex="-9"
         ></div>
         <div
-          class="header__artbox--parallax"
+          class="header__artbox--parallax parallax--object"
           id="para_02"
           data-rellax-speed="-14"
         ></div>
         <div
-          class="header__artbox--parallax"
+          class="header__artbox--parallax parallax--object"
           id="para_03"
           data-rellax-speed="-14"
         ></div>
         <div
-          class="header__artbox--parallax"
+          class="header__artbox--parallax parallax--object"
           id="para_04"
           data-rellax-speed="-12"
         ></div>
         <div
-          class="header__artbox--parallax"
+          class="header__artbox--parallax parallax--object"
           id="para_05"
-          data-rellax-speed="-8"
+          data-rellax-speed="-10"
         ></div>
         <div
-          class="header__artbox--parallax"
+          class="header__artbox--parallax parallax--object"
           id="para_06"
-          data-rellax-speed="-5"
+          data-rellax-speed="-3"
         ></div>
-        <div class="header__artbox--parallax" id="para_07"></div>
+        <div
+          class="header__artbox--parallax parallax--object"
+          id="para_07"
+          data-rellax-speed="0"
+        ></div>
       </div>
       <div class="header__text-box">
         <h1 class="heading-primary">
-          <span class="heading-primary--main">Outdoors</span>
-          <span class="heading-primary--sub">is where life happens</span>
+          <span class="heading-primary--main">Larry Boles</span>
+          <span class="heading-primary--sub">Full Stack Engineer</span>
         </h1>
 
         <a href="#section-tours" class="btn btn--white btn--animated"
-          >Discover our tours</a
+          >See my Projects</a
         >
       </div>
     </header>
@@ -119,7 +130,8 @@
       <section class="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
-            Exciting tours for adventurous people
+            <span class="heading-secondary--main">Full stack experience</span>
+            <span class="heading-secondary--sub">with Front End Focus</span>
           </h2>
         </div>
 
@@ -147,29 +159,12 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
-              <img
-                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
-                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                alt="Photo 1"
-                class="composition__photo composition__photo--p1"
-                src="img/nat-1-large.jpg"
-              />
+              <svg class="composition__photo composition__photo--p1" alt="JavaScript Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 161.7" width="140" height="162"><polygon points="160.5 15 251 67.2 251 171.7 160.5 224 70 171.7 70 67.2 " transform="matrix(0.77348066 0 0 0.77348066 -54.143646 -11.60221)" fill="#f7df1e"/><path d="m103 104c2.4 3.9 5.5 6.8 11.1 6.8 4.7 0 7.6-2.3 7.6-5.5 0-3.8-3.1-5.2-8.2-7.5l-2.8-1.2c-8.1-3.5-13.5-7.8-13.5-16.9 0-8.4 6.4-14.8 16.4-14.8 7.1 0 12.3 2.5 16 9l-8.7 5.6c-1.9-3.5-4-4.8-7.2-4.8-3.3 0-5.4 2.1-5.4 4.8 0 3.4 2.1 4.7 6.9 6.8l2.8 1.2c9.5 4.1 14.9 8.3 14.9 17.6 0 10.1-7.9 15.6-18.6 15.6-10.4 0-17.2-5-20.5-11.5zm-39.7 1c1.8 3.1 3.4 5.8 7.2 5.8 3.7 0 6-1.4 6-7.1V65.5h11.2v38.3c0 11.6-6.8 16.9-16.8 16.9-9 0-14.2-4.7-16.8-10.3z" stroke-width="0.8"/></svg>
 
-              <img
-                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
-                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                alt="Photo 2"
-                class="composition__photo composition__photo--p2"
-                src="img/nat-2-large.jpg"
-              />
+              <svg class="composition__photo composition__photo--p2" alt="React Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 172.9" width="150" height="173"><style>  .st0{fill:#222}.st1{fill:#00d8ff}.st2{fill:none;stroke:#00d8ff;stroke-width:144.7456;stroke-miterlimit:10}</style><path class="st0" d="M1.2 40.6 74.9 1.4 148.7 40.6v44.2l0.1 49.9-73.8 36.9-73.7-36.8V84.8Z" style="fill:#222;stroke-width:2;stroke:#00d8ff"/><circle class="st1" cx="74.8" cy="84.7" r="12.3" style="fill:#00d8ff;stroke-width:0.04"/><path class="st2" d="m74.8 59.6c16.6 0 31.9 2.4 43.5 6.4 14 4.8 22.6 12.1 22.6 18.7 0 6.9-9.1 14.6-24.1 19.6-11.3 3.8-26.3 5.7-42 5.7-16.1 0-31.4-1.8-42.8-5.8C17.5 99.3 8.7 91.4 8.7 84.7c0-6.5 8.2-13.8 22-18.6 11.6-4.1 27.4-6.5 44.1-6.5z" style="fill:none;stroke-width:6;stroke:#00d8ff"/><path class="st2" d="m53 72.2c8.3-14.3 18-26.5 27.3-34.5 11.1-9.7 21.7-13.5 27.5-10.2 6 3.4 8.1 15.2 4.9 30.7-2.4 11.7-8.2 25.6-16 39.2-8 14-17.3 26.2-26.4 34.2-11.5 10.1-22.7 13.7-28.5 10.4-5.7-3.3-7.8-14-5.1-28.3 2.3-12.1 8.1-27 16.4-41.5z" style="fill:none;stroke-width:6;stroke:#00d8ff"/><path class="st2" d="m53 97.4c-8.3-14.3-13.9-28.8-16.3-40.9-2.8-14.5-0.8-25.6 4.9-28.9 6-3.4 17.2 0.6 29 11 8.9 7.9 18.1 19.9 26 33.5 8.1 13.9 14.1 28.1 16.5 40 3 15 0.6 26.5-5.3 29.9-5.7 3.3-16-0.2-27.1-9.7-9.3-8-19.3-20.5-27.7-34.9z" style="fill:none;stroke-width:6;stroke:#00d8ff"/></svg>
 
-              <img
-                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
-                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                alt="Photo 3"
-                class="composition__photo composition__photo--p3"
-                src="img/nat-3-large.jpg"
-              />
+              <svg class="composition__photo composition__photo--p3" alt="MongoDB Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 161.7" width="140" height="162"><style>.a{fill:#fff;}</style><polygon points="160.5 15 251 67.2 251 171.7 160.5 224 70 171.7 70 67.2 " transform="matrix(0.77348066 0 0 0.77348066 -54.143646 -11.60221)" fill="#442d22"/><polygon points="251 171.7 160.5 224 70 171.7 70 67.2 160.5 15 251 67.2 " transform="matrix(0.68581343 0 0 0.68581343 -40.073055 -1.1259749)" fill="#8e714e"/><g transform="matrix(0.77348066 0 0 0.77348066 45.388956 25.710536)" fill="none"><path d="m35.1 142.3-3.8-1.3c0 0 0.5-19.3-6.5-20.7-4.6-5.4 0.7-227 17.3-0.7 0 0-5.7 2.9-6.7 7.8-1.1 4.8-0.4 14.9-0.4 14.9z" class="a"/><path d="m35.1 142.3-3.8-1.3c0 0 0.5-19.3-6.5-20.7-4.6-5.4 0.7-227 17.3-0.7 0 0-5.7 2.9-6.7 7.8-1.1 4.8-0.4 14.9-0.4 14.9z" fill="#a6a385"/><path d="m37.1 123.7c0 0 33.1-21.8 25.4-67.1C55 23.6 37.4 12.8 35.4 8.7 33.3 5.7 31.3 0.6 31.3 0.6L32.7 92.2c0 0.1-2.9 28.1 4.4 31.5" class="a"/><path d="m37.1 123.7c0 0 33.1-21.8 25.4-67.1C55 23.6 37.4 12.8 35.4 8.7 33.3 5.7 31.3 0.6 31.3 0.6L32.7 92.2c0 0.1-2.9 28.1 4.4 31.5" fill="#499d4a"/><path d="m29.3 124.9c0 0-31.1-21.2-29.3-58.6C1.8 28.9 23.8 10.5 28 7.2c2.8-3 2.9-4.1 3-7 1.9 4.2 1.6 62.1 1.8 68.9 0.8 26.3-1.5 50.8-3.6 55.7z" class="a"/><path d="m29.3 124.9c0 0-31.1-21.2-29.3-58.6C1.8 28.9 23.8 10.5 28 7.2c2.8-3 2.9-4.1 3-7 1.9 4.2 1.6 62.1 1.8 68.9 0.8 26.3-1.5 50.8-3.6 55.7z" fill="#58aa50"/></g></svg>
+
             </div>
           </div>
         </div>
@@ -620,21 +615,18 @@
     <script src="/js/rellax.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
-      const rellax = new Rellax(".header__artbox--parallax");
+      const rellax = new Rellax(".parallax--object");
       var sbHeight =
         window.innerHeight * (window.innerHeight / document.body.offsetHeight);
 
       $(window).scroll(function () {
-        const list = document.getElementsByClassName(
-          "header__artbox--parallax"
-        );
+        const list = document.getElementsByClassName("parallax--object");
         const listArr = Array.from(list)[0];
         var targetTop = $(".section-features").offset().top,
           targetHeight = $(".section-features").outerHeight(),
           windowHeight = $(window).height(),
           windowScroll = $(this).scrollTop();
         if (windowScroll > targetTop + targetHeight - windowHeight) {
-
           if (!listArr.classList.contains("u-hidden-element")) {
             for (i of list) {
               i.classList.add("u-hidden-element");
@@ -642,7 +634,6 @@
           }
         }
         if (windowScroll + windowHeight < targetTop + targetHeight) {
-
           if (listArr.classList.contains("u-hidden-element")) {
             for (i of list) {
               i.classList.remove("u-hidden-element");

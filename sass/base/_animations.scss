@@ -53,3 +53,12 @@
     transform: translateY(0);
   }
 }
+
+@keyframes cloudsMoveLeft {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 100%;
+  }
+}

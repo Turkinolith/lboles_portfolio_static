@@ -1,7 +1,9 @@
 .section-about {
-  background-color: $color-grey-light-1;
-  padding: 25rem 0;
-  margin-top: -20vh;
+  background-color: $color-mountains-dark;
+  padding: 5rem 0 25rem 0;
+  margin-top: -5vh;
+  position: relative;
+  z-index: 1;
 
   @include respond(tab-port) {
     padding: 26rem 0;
@@ -23,6 +25,7 @@
   position: relative;
   transform: skewY(-7deg);
   margin-top: -15rem;
+  z-index: 1;
 
   //* If viewer is using high resolution device & display is larger than phone size, use high rez image.
   //* OR If display is 2000px or greater, use the larger rez image regardless.
@@ -54,6 +57,7 @@
   background-color: $color-grey-light-1;
   padding: 25rem 0 15rem 0;
   margin-top: -15rem;
+  z-index: 1;
 
   @include respond(tab-port) {
     padding: 20rem 0 12rem 0;

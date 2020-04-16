@@ -63,6 +63,46 @@
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="logo" class="header__logo" />
       </div>
+      <div class="header__artbox">
+        <div
+          class="header__artbox--parallax"
+          id="para_00"
+          data-rellax-speed="-15"
+          data-rellax-zindex="-10"
+        ></div>
+        <div
+          class="header__artbox--parallax"
+          id="para_01"
+          data-rellax-speed="-15"
+          data-rellax-zindex="-9"
+        ></div>
+        <div
+          class="header__artbox--parallax"
+          id="para_02"
+          data-rellax-speed="-14"
+        ></div>
+        <div
+          class="header__artbox--parallax"
+          id="para_03"
+          data-rellax-speed="-14"
+        ></div>
+        <div
+          class="header__artbox--parallax"
+          id="para_04"
+          data-rellax-speed="-12"
+        ></div>
+        <div
+          class="header__artbox--parallax"
+          id="para_05"
+          data-rellax-speed="-8"
+        ></div>
+        <div
+          class="header__artbox--parallax"
+          id="para_06"
+          data-rellax-speed="-5"
+        ></div>
+        <div class="header__artbox--parallax" id="para_07"></div>
+      </div>
       <div class="header__text-box">
         <h1 class="heading-primary">
           <span class="heading-primary--main">Outdoors</span>
@@ -576,5 +616,40 @@
         <div class="col-3-of-4">col-3-of-4</div>
       </div>
     </section>
-  --></body>
+  -->
+    <script src="/js/rellax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+      const rellax = new Rellax(".header__artbox--parallax");
+      var sbHeight =
+        window.innerHeight * (window.innerHeight / document.body.offsetHeight);
+
+      $(window).scroll(function () {
+        const list = document.getElementsByClassName(
+          "header__artbox--parallax"
+        );
+        const listArr = Array.from(list)[0];
+        var targetTop = $(".section-features").offset().top,
+          targetHeight = $(".section-features").outerHeight(),
+          windowHeight = $(window).height(),
+          windowScroll = $(this).scrollTop();
+        if (windowScroll > targetTop + targetHeight - windowHeight) {
+
+          if (!listArr.classList.contains("u-hidden-element")) {
+            for (i of list) {
+              i.classList.add("u-hidden-element");
+            }
+          }
+        }
+        if (windowScroll + windowHeight < targetTop + targetHeight) {
+
+          if (listArr.classList.contains("u-hidden-element")) {
+            for (i of list) {
+              i.classList.remove("u-hidden-element");
+            }
+          }
+        }
+      });
+    </script>
+  </body>
 </html>

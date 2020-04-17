@@ -15,11 +15,11 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 10px;
-    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
+    box-shadow: 1rem 2rem 2rem rgba($color: $color-black, $alpha: 0.75);
     overflow: hidden;
 
     &--front {
-      background-color: $color-white;
+      background-color: $color-grey-dark-4;
     }
 
     /////////////////////////////////////////////
@@ -218,6 +218,7 @@
 
   &__details {
     padding: 3rem;
+    color: $color-white;
 
     ul {
       list-style: none;
@@ -230,7 +231,7 @@
         padding: 1rem;
 
         &:not(:last-child) {
-          border-bottom: 2px solid $color-grey-light-2;
+          border-bottom: 2px solid $color-grey-dark-5;
         }
       }
     }
@@ -241,7 +242,7 @@
   @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 10px;
-    background-color: $color-white;
+    background-color: $color-grey-dark-4;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &__side {

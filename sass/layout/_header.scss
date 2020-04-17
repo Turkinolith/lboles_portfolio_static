@@ -1,17 +1,7 @@
 .header {
   height: 85vh;
-  // background-image: linear-gradient(
-  //     to left bottom,
-  //     rgba($color-primary-light, 0.801),
-  //     rgba($color-primary-dark, 0.801)
-  //   ),
-  //   url(../img/H0_static_small.png);
-  // background-size: cover;
-  // background-position: top;
 
   position: relative;
-
-
 
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -20,38 +10,21 @@
 
   &__text-box {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    margin-left: -39rem;
     text-align: center;
+    //z-index: -1;
+
+    @include respond(phone) {
+      margin-left: -20rem;
+    }
   }
 
   &__artbox {
     height: 85vh;
     width: 100%;
     position: relative;
-
-
-    &--Background__cloud {
-      z-index: -1;
-      width: 50px;
-      height: 35px;
-      background-image: url(../../img/cloud01.png);
-      position: absolute;
-  
-      &--cloud1 {
-        top: 1%;
-        left: 0px;
-        animation: cloudsMoveLeft 30s linear infinite;
-      }
-  
-      &--cloud2 {
-        top: 20%;
-        left: 0px;
-        animation: cloudsMoveLeft 27s linear infinite;
-        animation-delay: -5s;
-      }
-    }
 
     &--parallax {
       position: absolute;
@@ -75,35 +48,30 @@
 
 #para_02 {
   background-image: url(../../img/h_2_mtn.png);
+  z-index: -8;
 }
 
 #para_03 {
   background-image: url(../../img/h_3_mtn.png);
+  z-index: -7;
 }
 
 #para_04 {
   background-image: url(../../img/h_4_mtn.png);
+  z-index: -6;
 }
 
 #para_05 {
   background-image: url(../../img/h_5_mtn.png);
+  z-index: -5;
 }
 
 #para_06 {
   background-image: url(../../img/h_6_mtn.png);
+  z-index: -4;
 }
 
 #para_07 {
   background-image: url(../../img/h_7_foreground.png);
-}
-
-#para_08 {
-  position: absolute;
-  height: 15%;
-  width: 100%;
-  bottom: 0;
-  //background-color: red;
-  transform: translate3d(0px, 100px, 0px);
-
-  //background: $color-mountains-dark;
+  
 }

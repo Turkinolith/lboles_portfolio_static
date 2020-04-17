@@ -7,6 +7,7 @@
 }
 
 html {
+  background-color: $color-mountains-dark;
   // This defines what 1rem is
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
@@ -25,11 +26,13 @@ html {
   @include respond(phone) {
     font-size: 43.75%; //1rem = 7px, 7/16 = 43.75%
   }
+
+  scroll-behavior: smooth;
 }
 
 body {
   box-sizing: border-box;
-  padding: 3rem; //White border around page.
+  padding: 1rem; //White border around page.
 
   @include respond(tab-port) {
     padding: 0rem;

@@ -23,7 +23,7 @@
       rgba($color-primary-light, 0.801),
       rgba($color-primary-dark, 0.801)
     ),
-    url(../../img/apple-mountains_1920.jpg);
+    url(./../img/apple-mountains_1920.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -42,7 +42,7 @@
         rgba($color-primary-light, 0.801),
         rgba($color-primary-dark, 0.801)
       ),
-      url(../../img/apple-mountains_1920.jpg);
+      url(./../img/apple-mountains_1920.jpg);
   }
 
   & > * {
